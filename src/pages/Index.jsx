@@ -1,4 +1,5 @@
 import { Container, VStack, Heading, Text, Button, Box, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { FaPlane, FaHotel, FaCar } from "react-icons/fa";
 
 const Index = () => {
@@ -15,9 +16,11 @@ const Index = () => {
           <Image src="/images/travel.jpg" alt="Travel" borderRadius="md" />
         </Box>
         <VStack spacing={4} width="100%">
-          <Button leftIcon={<FaPlane />} colorScheme="teal" size="lg" width="100%">
-            Book a Flight
-          </Button>
+          <Link to="/search-flights" style={{ width: "100%" }}>
+            <Button leftIcon={<FaPlane />} colorScheme="teal" size="lg" width="100%">
+              Book a Flight
+            </Button>
+          </Link>
           <Button leftIcon={<FaHotel />} colorScheme="teal" size="lg" width="100%">
             Book a Hotel
           </Button>
